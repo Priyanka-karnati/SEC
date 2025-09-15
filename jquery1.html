@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello and Click Me Button</title>
+  <!-- Include jQuery from CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Hello</h1>
+  <button id="clickMeBtn">Click Me</button>
+  <p id="message"></p>
+  <script>
+    $(document).ready(function() {
+      $("#clickMeBtn").click(function() {
+        $("#message").text("Button clicked");
+      });
+    });
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello and Click Me Button</title>
+  <!-- Include jQuery from CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+    #clickMeBtn {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #clickMeBtn:hover {
+      background: #0056b3;
+    }
+    #message {
+      margin-top: 25px;
+      font-size: 20px;
+      color: #28a745;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello</h1>
+
+  <button id="clickMeBtn">Click Me</button>
+
+  <p id="message"></p>
+
+  <script>
+    $(document).ready(function() {
+      $("#clickMeBtn").click(function() {
+        $("#message").text("Button clicked");
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Add a task">
+  <button id="add">Add</button>
+  <ul id="myUL"></ul>
+</body>
+<script>
+$(document).ready(function(){
+  $("#add").click(function(){
+    let task = $("#myInput").val();
+    if(task){
+      $("#myUL").append("<li>" + task + "</li>");
+      $("#myInput").val('');
+    }
+  });
+});
+</script>
+</html>
